@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahasvin S S — Portfolio</title>
+<meta name="description" content="Mahasvin S S, B.Sc. Computer Science student in Coimbatore. Published the DataPluck Chrome extension and built the Jai Indira Agro Engineering website with Next.js. Open to internships and entry-level roles.">
+<meta property="og:title" content="Mahasvin S S — Portfolio">
+<meta property="og:description" content="Computer Science student and developer from Coimbatore, Tamil Nadu. Chrome extension on the Chrome Web Store, live client website built with Next.js.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#f8f9fa">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%232563eb'/%3E%3Cpath d='M14 48V16h7l11 18 11-18h7v32h-7V29L32 46 21 29v19z' fill='%23fff'/%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Mahasvin S S","jobTitle":"Computer Science student and developer","email":"mahasvinss0@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Coimbatore","addressRegion":"Tamil Nadu","addressCountry":"IN"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Nallamuthu Gounder Mahalingam College, Coimbatore"},"sameAs":["https://www.linkedin.com/in/mahasvin-s-s-033315420","https://github.com/NivairaaWhite","https://youtube.com/@snowwhitedreams"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"DataPluck: Web Scraper & JSONL Dataset Builder","applicationCategory":"DeveloperApplication","operatingSystem":"Chrome","url":"https://chromewebstore.google.com/detail/datapluck-web-scraper-jso/ncffcamkfncchejefdkahkoffififcca","description":"Chrome extension that turns lists, tables, feeds and articles into CSV, Markdown, JSON and JSONL datasets. Runs entirely in the browser.","author":{"@type":"Person","name":"Mahasvin S S"}}</script>
+<style>
+:root{
+  --bg:#f8f9fa; --surface:#fff; --text:#111827; --body:#374151; --muted:#4b5563;
+  --border:#e5e7eb; --accent:#2563eb; --accent-dark:#1d4ed8; --ok:#16a34a;
+  --code-bg:#0d1117; --code-fg:#c9d1d9;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px;-webkit-text-size-adjust:100%}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+.skip{position:absolute;left:-9999px;top:8px;z-index:10;background:var(--text);color:#fff;padding:8px 14px;border-radius:6px;font-size:14px}
+.skip:focus{left:12px}
+
+/* Two-column layout: sticky directory on the left, content on the right */
+.app{display:grid;grid-template-columns:minmax(0,1fr);min-height:100vh}
+@media(min-width:900px){.app{grid-template-columns:288px minmax(0,1fr)}}
+
+.sidebar{background:var(--surface);border-bottom:1px solid var(--border);padding:24px clamp(20px,5vw,40px);display:flex;flex-direction:column}
+@media(min-width:900px){.sidebar{position:sticky;top:0;height:100vh;overflow-y:auto;border-bottom:0;border-right:1px solid var(--border);padding:40px 28px}}
+.brand h1{margin:0;font-size:1.5rem;line-height:1.2;letter-spacing:-.02em;text-wrap:balance}
+.brand p{margin:6px 0 0;color:var(--muted);font-size:.9rem;line-height:1.5}
+.status{display:flex;gap:8px;align-items:center;margin:14px 0 0;color:var(--muted);font-size:.8rem;line-height:1.4}
+.status::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--ok)}
+
+.directory{margin:28px 0}
+.directory ul{list-style:none;margin:0;padding:0;font-family:var(--mono);font-size:.875rem}
+.directory ul ul{margin:2px 0 6px 6px;padding-left:14px;border-left:1px solid var(--border)}
+.directory a{display:block;padding:5px 8px;margin:0 -8px;border-radius:6px;color:var(--muted);text-decoration:none;transition:color .15s,background-color .15s}
+.directory a:hover{color:var(--accent);background:var(--bg)}
+.directory .folder{color:var(--text);font-weight:600}
+.directory a:target-current{color:var(--accent);background:#eff6ff;font-weight:600}
+@supports (scroll-target-group:auto){.directory{scroll-target-group:auto}}
+.side-links{margin-top:auto;display:flex;flex-wrap:wrap;gap:4px 16px;font-size:.85rem}
+.side-links a{color:var(--muted);text-decoration:none}
+.side-links a:hover{color:var(--accent);text-decoration:underline}
+@media(max-width:899px){
+  .directory{margin:18px 0 14px}
+  .directory ul{display:flex;flex-wrap:wrap;gap:0 16px}
+  .directory ul ul{display:none}
+  .directory a{margin:0}
+}
+
+/* Content */
+.content{padding:clamp(28px,6vw,72px) clamp(20px,5vw,64px) 40px;max-width:900px}
+section{scroll-margin-top:24px}
+section+section{margin-top:56px;padding-top:48px;border-top:1px solid var(--border)}
+h2{margin:0 0 20px;font-size:1.5rem;line-height:1.25;letter-spacing:-.02em;text-wrap:balance}
+h3{margin:0 0 4px;font-size:1.3rem;line-height:1.3;letter-spacing:-.015em;text-wrap:balance}
+h4{margin:0 0 2px;font-size:.95rem}
+p,li{color:var(--body);font-size:1rem}
+p{margin:0 0 14px;max-width:65ch}
+ul{margin:0 0 6px;padding-left:20px}li{margin-bottom:4px;max-width:65ch}
+code{font-family:var(--mono);font-size:.85em;background:#eef0f3;padding:1px 5px;border-radius:4px;color:var(--text)}
+.meta{color:var(--muted);font-size:.9rem;margin:0}
+.lede{font-size:1.2rem;line-height:1.65;color:var(--text);max-width:60ch}
+
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0}
+.btn{display:inline-block;padding:9px 18px;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--text);font:inherit;font-size:.9rem;font-weight:600;line-height:1.5;text-decoration:none;transition:border-color .15s,background-color .15s}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{background:var(--accent-dark);border-color:var(--accent-dark);color:#fff}
+
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;margin:30px 0 0;border:1px solid var(--border);border-radius:8px;background:var(--surface);overflow:hidden}
+.facts div{padding:16px 18px;border-left:1px solid var(--border)}
+.facts div:first-child{border-left:0}
+.facts b{display:block;font-size:.95rem;margin-bottom:2px}
+.facts span{display:block;color:var(--muted);font-size:.875rem;line-height:1.55}
+@media(max-width:700px){.facts div{border-left:0;border-top:1px solid var(--border)}.facts div:first-child{border-top:0}}
+
+/* Projects */
+.project+.project{margin-top:48px;padding-top:44px;border-top:1px solid var(--border)}
+.status-tag{display:inline-block;margin:0 0 10px;padding:2px 10px;border:1px solid var(--border);border-radius:999px;background:var(--surface);color:var(--muted);font-size:.8rem;line-height:1.6}
+.flow{display:grid;grid-template-columns:repeat(3,1fr);margin:22px 0 6px;padding:0;list-style:none;border:1px solid var(--border);border-radius:8px;background:var(--surface);overflow:hidden}
+.flow li{margin:0;padding:14px 18px;border-left:1px solid var(--border);color:var(--muted);font-size:.875rem;line-height:1.6}
+.flow li:first-child{border-left:0}
+.flow b{display:block;margin-bottom:2px;color:var(--text);font-size:.95rem}
+@media(max-width:700px){.flow{grid-template-columns:1fr}.flow li{border-left:0;border-top:1px solid var(--border)}.flow li:first-child{border-top:0}}
+.decisions{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:18px 32px;margin:26px 0 4px}
+.decisions p{margin:0;color:var(--muted);font-size:.9rem;line-height:1.65}
+.code{margin:26px 0 0;min-width:0}
+.code figcaption{margin-bottom:8px;color:var(--muted);font-size:.85rem}
+.code pre{margin:0;padding:16px;overflow-x:auto;background:var(--code-bg);color:var(--code-fg);border-radius:6px;font:13px/1.7 var(--mono);tab-size:2}
+.code code{background:none;padding:0;color:inherit;font-size:inherit}
+.code .k{color:#79c0ff}.code .s{color:#a5d6ff}.code .n{color:#ffa657}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0;padding:0;list-style:none}
+.tags li{margin:0;padding:2px 10px;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--text);font-size:.85rem;line-height:1.6}
+
+/* Skills, certifications, education */
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:26px 28px}
+.cols h3,h3.sm{margin:0;font-size:.95rem;letter-spacing:0}
+.cols .tags{margin-top:10px}
+h3.sm{margin-top:40px}
+.row{display:flex;justify-content:space-between;gap:2px 20px;flex-wrap:wrap;padding:12px 0;border-top:1px solid var(--border)}
+.row:last-of-type{border-bottom:1px solid var(--border)}
+.row div{color:var(--text);max-width:62ch}
+.row span{color:var(--muted);font-size:.9rem;white-space:nowrap}
+
+footer{padding:36px 0 0;color:var(--muted);font-size:.85rem}
+section+footer{margin-top:56px;border-top:1px solid var(--border)}
+
+@media print{
+  .skip,.directory,.side-links,.actions{display:none!important}
+  body{background:#fff}.app{display:block}
+  .sidebar{position:static;height:auto;border:0;padding:0 0 16px}
+  .content{padding:0}.flow,.facts,.tags li,.status-tag{background:#fff}
+  section,.project{break-inside:avoid}
+}
+</style></head><body>
+<a class="skip" href="#about">Skip to content</a>
+<div class="app">
+
+<aside class="sidebar">
+  <div class="brand">
+    <h1>Mahasvin S S</h1>
+    <p>B.Sc. Computer Science student. I build browser tools and business websites.</p>
+    <p class="status">Open to internships and entry-level roles</p>
+  </div>
+  <nav class="directory" aria-label="Directory">
+    <ul>
+      <li><a href="#about">/about</a></li>
+      <li><a class="folder" href="#projects">/projects</a>
+        <ul>
+          <li><a href="#p-datapluck">DataPluck</a></li>
+          <li><a href="#p-jiae">Jai Indira Agro</a></li>
+        </ul>
+      </li>
+      <li><a href="#skills">/skills</a></li>
+      <li><a href="#education">/education</a></li>
+      <li><a href="#contact">/contact</a></li>
+    </ul>
+  </nav>
+  <div class="side-links">
+    <a href="https://github.com/NivairaaWhite" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/mahasvin-s-s-033315420" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="assets/Mahasvin_S_S_Resume.pdf" download>Resume (PDF)</a>
+  </div>
+</aside>
+
+<main class="content">
+
+<section id="about">
+<h2>About</h2>
+<p class="lede">I build things people can use straight away: a Chrome extension that turns web pages into clean datasets, and a live website for a manufacturer in Pollachi.</p>
+<p>I’m a Computer Science undergraduate from Coimbatore, Tamil Nadu. My main tools are TypeScript, JavaScript, React and Next.js, with Python and MySQL for data work. I hold certifications from IIT Bombay, IIT Madras (NPTEL) and Anapty CodeEmy, I learn quickly, and I enjoy working in a team.</p>
+<div class="actions">
+  <a class="btn primary" href="assets/Mahasvin_S_S_Resume.pdf" download>Download resume</a>
+  <a class="btn" href="mailto:mahasvinss0@gmail.com">Email me</a>
+</div>
+<div class="facts">
+  <div><b>On the Chrome Web Store</b><span>DataPluck, a Manifest V3 extension</span></div>
+  <div><b>Live client website</b><span>Jai Indira Agro Engineering, built with Next.js 14</span></div>
+  <div><b>5 certifications</b><span>IIT Bombay, IIT Madras, Anapty CodeEmy, S.K Robotics</span></div>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+
+<article class="project" aria-labelledby="p-datapluck">
+<p class="status-tag">Chrome extension, published</p>
+<h3 id="p-datapluck">DataPluck: Web Scraper &amp; JSONL Dataset Builder</h3>
+<p class="meta">Visual web scraper that runs entirely in the browser, with no backend of its own</p>
+<p style="margin-top:16px">Point at a list, table, feed or article, click once, and export clean CSV, Markdown, JSON or JSONL. It is built for anyone who needs structured data from a page, including training data for language models.</p>
+
+<ol class="flow" aria-label="How DataPluck works">
+<li><b>1. Pick</b>Hover to preview a repeating group, click to lock it, widen or narrow the selection.</li>
+<li><b>2. Clean</b>Rename columns, parse numbers, extract with regex, remove duplicates.</li>
+<li><b>3. Export</b>Download or copy CSV, Markdown, JSON, JSONL, or send to Sheets and Notion.</li>
+</ol>
+
+<ul style="margin-top:18px">
+<li>Detects repeating items and names columns from class names, headings and the shape of the value (price, date, rating).</li>
+<li>Per-column cleaning: <span style="white-space:nowrap">$1,299.00</span> and <span style="white-space:nowrap">1.299,00 €</span> both become numbers, plus case changes, link domains, find and replace, and regex extraction.</li>
+<li>Collects across up to 200 pages, through infinite scroll and virtualized lists, and restores an interrupted run.</li>
+<li>Exports for fine-tuning and retrieval: OpenAI-style messages, Alpaca, ShareGPT, prompt/completion and chunked RAG records.</li>
+<li>Adds <code>source_url</code> and <code>captured_at</code> columns so a dataset can be audited later.</li>
+</ul>
+
+<div class="decisions">
+<div><h4>No backend</h4><p>Page content stays on the user’s computer unless they export it.</p></div>
+<div><h4>Narrow permissions</h4><p>Asks for <code>activeTab</code> instead of all-sites access, and runs no script on pages the user did not click.</p></div>
+<div><h4>Safe exports</h4><p>Cells that start with <code>=</code>, <code>+</code>, <code>-</code> or <code>@</code> are escaped, so a scraped page cannot plant formulas in a CSV.</p></div>
+<div><h4>Tested in real Chromium</h4><p>70+ unit and end-to-end tests, run with Playwright against fixture pages and a mock license server.</p></div>
+</div>
+
+<figure class="code">
+<figcaption>Example output: JSONL, one record per line</figcaption>
+<pre><code>{<span class="k">"title"</span>:<span class="s">"Desk Frame"</span>,<span class="k">"price"</span>:<span class="n">1299.0</span>,<span class="k">"source_url"</span>:<span class="s">"https://shop.test"</span>,<span class="k">"captured_at"</span>:<span class="s">"2026-10-19"</span>}
+{<span class="k">"title"</span>:<span class="s">"Monitor Arm"</span>,<span class="k">"price"</span>:<span class="n">2499.0</span>,<span class="k">"source_url"</span>:<span class="s">"https://shop.test"</span>,<span class="k">"captured_at"</span>:<span class="s">"2026-10-19"</span>}</code></pre>
+</figure>
+
+<ul class="tags" aria-label="Technologies"><li>TypeScript</li><li>Chrome Extension (Manifest V3)</li><li>esbuild</li><li>Playwright</li><li>Dodo Payments license API</li></ul>
+<div class="actions"><a class="btn primary" href="https://chromewebstore.google.com/detail/datapluck-web-scraper-jso/ncffcamkfncchejefdkahkoffififcca" target="_blank" rel="noopener">View on Chrome Web Store</a></div>
+</article>
+
+<article class="project" aria-labelledby="p-jiae">
+<p class="status-tag">Client website, live</p>
+<h3 id="p-jiae">Jai Indira Agro Engineering</h3>
+<p class="meta">Business website for an agricultural machinery manufacturer in Pollachi, Tamil Nadu</p>
+<ul style="margin-top:16px">
+<li>Multi-page Next.js 14 site: home, machinery, applications, about, resources and contact.</li>
+<li>Product catalogue with a page for each machine, showing capacity, power source and specifications.</li>
+<li>Applications guide, company timeline, and an awards and recognition section.</li>
+<li>Quote request form (Web3Forms), plus call and WhatsApp buttons for direct enquiries.</li>
+<li>SEO: JSON-LD structured data, sitemap and page metadata. Responsive on mobile.</li>
+</ul>
+<ul class="tags" aria-label="Technologies"><li>Next.js 14</li><li>React</li><li>Tailwind CSS</li><li>Web3Forms</li><li>Vercel</li></ul>
+<div class="actions"><a class="btn primary" href="https://jai-indira-website.vercel.app" target="_blank" rel="noopener">Visit live site</a></div>
+</article>
+</section>
+
+<section id="skills">
+<h2>Skills &amp; certifications</h2>
+<div class="cols">
+<div><h3>Web</h3><ul class="tags"><li>TypeScript</li><li>JavaScript</li><li>HTML</li><li>CSS</li><li>React</li><li>Next.js</li><li>Tailwind CSS</li></ul></div>
+<div><h3>Extensions &amp; tooling</h3><ul class="tags"><li>Chrome extensions (MV3)</li><li>esbuild</li><li>Playwright</li><li>Vercel</li><li>SEO / JSON-LD</li></ul></div>
+<div><h3>Programming &amp; data</h3><ul class="tags"><li>Python (basic)</li><li>MySQL (basic)</li><li>DBMS (basic)</li><li>Web data extraction</li><li>JSON / JSONL</li><li>Excel</li></ul></div>
+<div><h3>Other</h3><ul class="tags"><li>Digital marketing</li><li>Microsoft Office</li><li>English communication</li><li>Teamwork</li></ul></div>
+</div>
+<h3 class="sm">Certifications</h3>
+<div class="row"><div>Digital Marketing, Anapty CodeEmy Technologies (2 months)</div><span>Sep 2026</span></div>
+<div class="row"><div>Python 3.4.3, Spoken Tutorial, IIT Bombay (95%)</div><span>Mar 2026</span></div>
+<div class="row"><div>Real Time Sensing and Automation Technologies, S.K Robotics with NGM College</div><span>Feb 2026</span></div>
+<div class="row"><div>HTML, Spoken Tutorial, IIT Bombay (92%)</div><span>Oct 2025</span></div>
+<div class="row"><div>Python for Data Science, NPTEL, IIT Madras</div><span>Jul–Aug 2025</span></div>
+</section>
+
+<section id="education">
+<h2>Education</h2>
+<div class="row"><div>B.Sc. Computer Science, Nallamuthu Gounder Mahalingam College, Coimbatore (Bharathiar University)</div><span>Pursuing</span></div>
+<div class="row"><div>Higher Secondary (H.S.C.), Akshaya Academy Matric Hr. Sec. School</div><span>2023–2024</span></div>
+<div class="row"><div>Secondary School (S.S.L.C.), Akshaya Academy Matric Hr. Sec. School</div><span>2021–2022</span></div>
+<p style="margin-top:18px">Active member of the National Cadet Corps (NCC). Languages: English and Tamil.</p>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>I’m open to internships and entry-level roles. Email is the best way to reach me.</p>
+<p class="meta"><a href="mailto:mahasvinss0@gmail.com">mahasvinss0@gmail.com</a> &nbsp;|&nbsp; <a href="tel:+917397667169">+91 73976 67169</a> &nbsp;|&nbsp; Coimbatore, Tamil Nadu</p>
+<div class="actions">
+<a class="btn primary" href="mailto:mahasvinss0@gmail.com">Email</a>
+<a class="btn" href="https://www.linkedin.com/in/mahasvin-s-s-033315420" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn" href="https://github.com/NivairaaWhite" target="_blank" rel="noopener">GitHub</a>
+<a class="btn" href="https://wa.me/917397667169" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+<p class="meta" style="margin-top:22px">Elsewhere:
+<a href="https://youtube.com/@snowwhitedreams" target="_blank" rel="noopener">YouTube</a>,
+<a href="https://www.facebook.com/share/1MQT3GLTLv/" target="_blank" rel="noopener">Facebook</a>,
+<a href="https://whatsapp.com/channel/0029Vb8ZHyQ6LwHeMSmqDu3o" target="_blank" rel="noopener">Dreams channel</a></p>
+</section>
+
+<footer>© 2026 Mahasvin S S &nbsp;·&nbsp; Coimbatore, Tamil Nadu</footer>
+</main>
+</div>
+</body></html>
